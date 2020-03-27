@@ -10,22 +10,22 @@ let now: Date = new Date();
 // array
 let colors: string[] = ["red", "blue", "purple"];
 let myNumbers: number[] = [1, 5, 85];
-let truths: boolean[] = [true, false, null, undefined];
+let truths: boolean[] = [true, false];
 
-class Car {}
+class Car { }
 let car: Car = new Car();
 
 // Object literal
 let point: { x: number; y: number } = {
-  x: 10,
-  y: 20
+    x: 10,
+    y: 20
 };
 
 // function
 // describe what argument is expected (i: number)
-// and what values is exptected to be returned: void (void is the same as nothing)
+// and what values is exptected to be returned: void (void is the same as nothing, null or undefined)
 const logNumber: (i: number) => void = (i: number) => {
-  console.log(i);
+    console.log(i);
 };
 
 // ALL OF ABOVE ANNOTATIONS ARE UNNECESSARY!!!
@@ -34,7 +34,7 @@ const logNumber: (i: number) => void = (i: number) => {
 
 // RULE OF THUMB:
 // Whenver we are declaring a variable and assigning a value to it on the same line,
-// Typescript will figure out the type for us, so we won't use type annotations manually!
+// Typescript will figure out the type for us, so we won't have to type annotations manually!
 
 // WHEN TO USE ANNOTATIONS
 
@@ -49,9 +49,9 @@ let words = ["red", "green", "blue"];
 let foundWord: boolean;
 
 words.map(word => {
-  if (word === "green") {
-    foundWord = true;
-  }
+    if (word === "green") {
+        foundWord = true;
+    }
 });
 
 // a better way, would be to assign a value right away:
@@ -63,7 +63,7 @@ let numberAboveZero: boolean | number = false; // letting ts know that the type 
 // be a boolean or a number
 
 numbers.map(number => {
-  if (number > 0) {
-    numberAboveZero = number;
-  }
+    if (number > 0) {
+        numberAboveZero = number;
+    }
 });
