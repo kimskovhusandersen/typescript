@@ -2,15 +2,21 @@
 import { Sorter } from "./Sorter";
 import { NumbersCollection } from "./NumbersCollection";
 import { CharCollection } from "./CharCollection";
+import { LinkedList } from "./LinkedList";
 
-const numbers = [10, 3, -5, 0, 45, -104, 1 * 5, 4 / 46, 0.45];
-const numbersCollection = new NumbersCollection(numbers);
-const numberSorter = new Sorter(numbersCollection);
-numberSorter.sort();
+const numbersCollection = new NumbersCollection([50, 3, -5, 0]);
+numbersCollection.sort();
 console.log(numbersCollection.data);
 
-const letters = "hhalKJSDasdfaiIISk";
-const charCollection = new CharCollection(letters);
-const charSorter = new Sorter(charCollection);
-charSorter.sort();
+const charCollection = new CharCollection("hhalKJSDasdfaiIISk");
+charCollection.sort();
 console.log(charCollection.data);
+
+const linkedList = new LinkedList();
+linkedList.add(500);
+linkedList.add(-10);
+linkedList.add(-3);
+linkedList.add(4);
+
+linkedList.sort();
+linkedList.print();
